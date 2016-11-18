@@ -1,0 +1,11 @@
+C:\Users\Vladyslav_Drachuk\Downloads\GameStore_(Vladyslav_Drachuk)3(1)\GameStore_(Vladyslav_Drachuk)\DAL\bin\Debug\GameStore.DAL.dll.config
+C:\Users\Vladyslav_Drachuk\Downloads\GameStore_(Vladyslav_Drachuk)3(1)\GameStore_(Vladyslav_Drachuk)\DAL\bin\Debug\GameStore.DAL.dll
+C:\Users\Vladyslav_Drachuk\Downloads\GameStore_(Vladyslav_Drachuk)3(1)\GameStore_(Vladyslav_Drachuk)\DAL\bin\Debug\GameStore.DAL.pdb
+C:\Users\Vladyslav_Drachuk\Downloads\GameStore_(Vladyslav_Drachuk)3(1)\GameStore_(Vladyslav_Drachuk)\DAL\bin\Debug\DataAnnotationsExtensions.dll
+C:\Users\Vladyslav_Drachuk\Downloads\GameStore_(Vladyslav_Drachuk)3(1)\GameStore_(Vladyslav_Drachuk)\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Vladyslav_Drachuk\Downloads\GameStore_(Vladyslav_Drachuk)3(1)\GameStore_(Vladyslav_Drachuk)\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Vladyslav_Drachuk\Downloads\GameStore_(Vladyslav_Drachuk)3(1)\GameStore_(Vladyslav_Drachuk)\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Vladyslav_Drachuk\Downloads\GameStore_(Vladyslav_Drachuk)3(1)\GameStore_(Vladyslav_Drachuk)\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Vladyslav_Drachuk\Downloads\GameStore_(Vladyslav_Drachuk)3(1)\GameStore_(Vladyslav_Drachuk)\DAL\obj\Debug\GameStore.DAL.dll
+C:\Users\Vladyslav_Drachuk\Downloads\GameStore_(Vladyslav_Drachuk)3(1)\GameStore_(Vladyslav_Drachuk)\DAL\obj\Debug\GameStore.DAL.pdb
+C:\Users\Vladyslav_Drachuk\Downloads\GameStore_(Vladyslav_Drachuk)3(1)\GameStore_(Vladyslav_Drachuk)\DAL\obj\Debug\GameStore.DAL.csprojResolveAssemblyReference.cache

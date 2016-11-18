@@ -1,0 +1,13 @@
+C:\Users\Vladyslav_Drachuk\Downloads\SDesk\DAL\bin\Debug\DAL.dll.config
+C:\Users\Vladyslav_Drachuk\Downloads\SDesk\DAL\bin\Debug\DAL.dll
+C:\Users\Vladyslav_Drachuk\Downloads\SDesk\DAL\bin\Debug\DAL.pdb
+C:\Users\Vladyslav_Drachuk\Downloads\SDesk\DAL\bin\Debug\DataAnnotationsExtensions.dll
+C:\Users\Vladyslav_Drachuk\Downloads\SDesk\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Vladyslav_Drachuk\Downloads\SDesk\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Vladyslav_Drachuk\Downloads\SDesk\DAL\bin\Debug\Sdesk.Model.dll
+C:\Users\Vladyslav_Drachuk\Downloads\SDesk\DAL\bin\Debug\Sdesk.Model.pdb
+C:\Users\Vladyslav_Drachuk\Downloads\SDesk\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Vladyslav_Drachuk\Downloads\SDesk\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Vladyslav_Drachuk\Downloads\SDesk\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Vladyslav_Drachuk\Downloads\SDesk\DAL\obj\Debug\DAL.dll
+C:\Users\Vladyslav_Drachuk\Downloads\SDesk\DAL\obj\Debug\DAL.pdb
