@@ -7,9 +7,11 @@ using System.Web.Http;
 using DAL.Interfaces;
 using DAL.Repositories;
 using Sdesk.Model;
+using SDesk.API.Util;
 
 namespace SDesk.API.Controllers
 {
+   [VersionedRoute("api/mails/{id?}", 1)]
     public class MailsController : ApiController
     {
 
@@ -22,35 +24,70 @@ namespace SDesk.API.Controllers
         }
 
 
-        public IEnumerable<Mail> GetAllMails()
+        public HttpResponseMessage GetAllMails()
         {
-            var mails = _mailRepository.GetAll();
-            return mails;
+            /*
+             var mails = _mailRepository.GetAll();
+             if (mails != null && mails.Count() != 0)
+             {
+
+                return Request.CreateResponse<IEnumerable<Mail>>(HttpStatusCode.OK, mails);
+             }
+             else
+             {
+                 return new HttpResponseMessage(HttpStatusCode.NotFound);
+             }
+             */
+            throw new NotImplementedException();
         }
 
 
-        public Mail GetMail(int id)
+        public HttpResponseMessage GetMail(int id)
         {
             var mail = _mailRepository.GetSingle(id);
-            return mail;
+            if (mail != null)
+            {
+                return Request.CreateResponse<Mail>(HttpStatusCode.OK, mail);
+            }
+            else
+            {
+                return new HttpResponseMessage(HttpStatusCode.NotFound);
+            }
         }
 
 
-        public void PostMail(Mail mail)
+        public HttpResponseMessage PostMail(Mail mail)
         {
             _mailRepository.Create(mail);
+            return new HttpResponseMessage(HttpStatusCode.Created);
         }
 
 
-        public void PutMail(int id, Mail mail)
+        public HttpResponseMessage PutMail(int id, Mail mail)
         {
-           //later
+            if (mail == null && id != mail.Id)
+            {
+                return new HttpResponseMessage(HttpStatusCode.BadRequest);
+            }
+            else
+            {
+                var oldMail = _mailRepository.GetSingle(id);
+                if (oldMail == null)
+                {
+                    return new HttpResponseMessage(HttpStatusCode.MethodNotAllowed);
+                }
+                _mailRepository.Delete(id);
+                _mailRepository.Create(mail);
+                return new HttpResponseMessage(HttpStatusCode.Accepted);
+            }
+            
         }
 
 
-        public void DeleteMail(int id)
+        public HttpResponseMessage DeleteMail(int id)
         {
             _mailRepository.Delete(id);
+            return new HttpResponseMessage(HttpStatusCode.Accepted);
         }
     }
 }

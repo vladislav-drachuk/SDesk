@@ -21,19 +21,34 @@ namespace SDesk.API.Controllers
         }
 
         [ActionName("GetById")]
-        public JiraItem GetJiraItems(int id)
+        public HttpResponseMessage GetJiraItems(int id)
         {
             var jiraItem = _jiraItemRepository.GetSingle(id);
-            return jiraItem;
+            if (jiraItem != null)
+            {
+                return Request.CreateResponse<JiraItem>(HttpStatusCode.OK, jiraItem);
+            }
+            else
+            {
+                return new HttpResponseMessage(HttpStatusCode.NotFound);
+            }
         }
 
      //   [Route("api/jiraitems/{id:jiraid}")]
         [ActionName("GetByString")]
-        public JiraItem GetJiraItems(string id)
+        public HttpResponseMessage GetJiraItems(string id)
         {
             var intId = Int32.Parse(id.Substring(5)); 
             var jiraItem = _jiraItemRepository.GetSingle(intId);
-            return jiraItem;
+            if (jiraItem != null)
+            {
+                return Request.CreateResponse<JiraItem>(HttpStatusCode.OK, jiraItem);
+            }
+            else
+            {
+                return new HttpResponseMessage(HttpStatusCode.NotFound);
+            }
+
         }
 
     }

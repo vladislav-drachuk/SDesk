@@ -8,9 +8,11 @@ using System.Web.Http;
 using DAL.Interfaces;
 using DAL.Repositories;
 using Sdesk.Model;
+using SDesk.API.Util;
 
 namespace SDesk.API.Controllers
 {
+   
     [RoutePrefix("api/mails")]
     public class AttachmentsController : ApiController
     {
@@ -22,9 +24,11 @@ namespace SDesk.API.Controllers
             _attachmentRepository = uof.AttachmentRepository;
         }
 
-        [Route("{id:int}/attachments")]
-        public IEnumerable<Attachment> GetAttachments(int id, string extention = null, int status = 0)
+        [VersionedRoute("{id:int}/attachments",1)]
+        public HttpResponseMessage GetAttachments(int id, string extention = null, int status = 0)
         {
+
+            /*
             var attachments = _attachmentRepository.FindBy(a => a.MailId == id );
             if (!String.IsNullOrEmpty(extention))
             {
@@ -34,35 +38,74 @@ namespace SDesk.API.Controllers
             {
                 attachments = attachments.Where(a => a.StatusId == status);
             }
-            return attachments;
+
+            if (attachments != null && attachments.Count() != 0)
+            {
+                return Request.CreateResponse<IEnumerable<Attachment>>(HttpStatusCode.OK, attachments);
+            }
+            else
+            {
+                return new HttpResponseMessage(HttpStatusCode.NotFound);
+            }
+            */
+            throw new NotImplementedException();
         }
 
 
-        [Route("{id:int}/attachments/{attId:int}")]
-        public Attachment GetAttachment(int id, int attId)
+        [VersionedRoute("{id:int}/attachments/{attId:int}",1)]
+        public HttpResponseMessage GetAttachment(int id, int attId)
         {
-            var attachment = _attachmentRepository.FindBy(a => a.MailId == id && a.Id== attId).FirstOrDefault(); ;
-            return attachment;
+            var attachment = _attachmentRepository.FindBy(a => a.MailId == id && a.Id== attId).FirstOrDefault();
+            if (attachment != null)
+            {
+                return Request.CreateResponse<Attachment>(HttpStatusCode.OK, attachment);
+            }
+            else
+            {
+                return new HttpResponseMessage(HttpStatusCode.NotFound);
+            }
         }
 
 
         [HttpPost]
-        [Route("{id:int}/attachments")]
-        public void CreateAttachment(int id, Attachment attachment)
+        [VersionedRoute("{id:int}/attachments",1)]
+        public HttpResponseMessage CreateAttachment(int id, Attachment attachment)
         {
             _attachmentRepository.Create(attachment);
+            return new HttpResponseMessage(HttpStatusCode.Created);
         }
+
+
         [HttpPut]
-        [Route("{id:int}/attachments/{attId:int}")]
-        public void EditAttachment(int id, int attId, Attachment mail)
+        [VersionedRoute("{id:int}/attachments/{attId:int}",1)]
+        public HttpResponseMessage EditAttachment(int id, int attId, Attachment attachment)
         {
-            //later
+            if (attachment == null && attId != attachment.Id && id != attachment.MailId)
+            {
+                return new HttpResponseMessage(HttpStatusCode.BadRequest);
+            }
+            else
+            {
+                var oldAttachment = _attachmentRepository.GetSingle(attId);
+                if (oldAttachment == null)
+                {
+                    return new HttpResponseMessage(HttpStatusCode.MethodNotAllowed);
+                }
+                _attachmentRepository.Delete(attId);
+                _attachmentRepository.Create(attachment);
+                return new HttpResponseMessage(HttpStatusCode.Accepted);
+            }
+
         }
+
+
         [HttpDelete]
-        [Route("{id:int}/attachments/{attId:int}")]
-        public void RemoveAttachment(int id, int attId)
+        [VersionedRoute("{id:int}/attachments/{attId:int}",1)]
+        public HttpResponseMessage RemoveAttachment(int id, int attId)
         {
             _attachmentRepository.Delete(attId);
+            return new HttpResponseMessage(HttpStatusCode.Accepted);
         }
+
     }
 }

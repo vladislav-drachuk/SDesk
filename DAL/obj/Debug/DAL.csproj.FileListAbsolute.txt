@@ -11,3 +11,16 @@ C:\Users\Vladyslav_Drachuk\Downloads\SDesk\DAL\bin\Debug\EntityFramework.SqlServ
 C:\Users\Vladyslav_Drachuk\Downloads\SDesk\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\Vladyslav_Drachuk\Downloads\SDesk\DAL\obj\Debug\DAL.dll
 C:\Users\Vladyslav_Drachuk\Downloads\SDesk\DAL\obj\Debug\DAL.pdb
+C:\Work\Study\Epam\Lab\SDesk\SDesk\DAL\bin\Debug\DAL.dll.config
+C:\Work\Study\Epam\Lab\SDesk\SDesk\DAL\bin\Debug\DAL.dll
+C:\Work\Study\Epam\Lab\SDesk\SDesk\DAL\bin\Debug\DAL.pdb
+C:\Work\Study\Epam\Lab\SDesk\SDesk\DAL\bin\Debug\DataAnnotationsExtensions.dll
+C:\Work\Study\Epam\Lab\SDesk\SDesk\DAL\bin\Debug\EntityFramework.dll
+C:\Work\Study\Epam\Lab\SDesk\SDesk\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Work\Study\Epam\Lab\SDesk\SDesk\DAL\bin\Debug\Sdesk.Model.dll
+C:\Work\Study\Epam\Lab\SDesk\SDesk\DAL\bin\Debug\Sdesk.Model.pdb
+C:\Work\Study\Epam\Lab\SDesk\SDesk\DAL\bin\Debug\EntityFramework.xml
+C:\Work\Study\Epam\Lab\SDesk\SDesk\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Work\Study\Epam\Lab\SDesk\SDesk\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Work\Study\Epam\Lab\SDesk\SDesk\DAL\obj\Debug\DAL.dll
+C:\Work\Study\Epam\Lab\SDesk\SDesk\DAL\obj\Debug\DAL.pdb
