@@ -6,9 +6,7 @@ using System.Web.Http.ExceptionHandling;
 
 namespace SDesk.API.Controllers
 {
-    /// <summary>
-    /// Class in charge with handleing special exception cases 
-    /// </summary>
+
     public class ExceptionHandler : IExceptionHandler
     {
         public Task HandleAsync(ExceptionHandlerContext context, CancellationToken cancellationToken)
